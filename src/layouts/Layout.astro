@@ -1,0 +1,39 @@
+---
+
+import Navbar from '../components/Navbar.astro'
+import global from '../global.css'
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Navbar />
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+@font-face {
+  font-family: "RodFat";
+  src: url("/fonts/rodfat.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+</style>
+
+24 24 22
