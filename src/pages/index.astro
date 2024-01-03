@@ -1,6 +1,27 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from "../layouts/Layout.astro";
+import Instagram from '../components/instagram.svelte'
 ---
 
 <Layout title="Welcome to Astro.">
+  <div
+    class=" max-h-screen overflow-y-scroll scrollbar-hide snap-start snap-y snap-mandatory"
+  >
+    <div class=" h-screen snap-start py-20">
+      <div class="flex h-full w-full">
+        <div
+          class="h-1/2 flex justify-center w-full bg-center bg-no-repeat bg-cover"
+          style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), #ffffeb), url('/golden-co.webp')"
+        >
+          <img class=" h-3/5 px-4 py-12 justify-center" src="/logo-black.svg" />
+        </div>
+      </div>
+    </div>
+    <div class=" h-screen snap-start py-20">
+        <div class="flex h-screen w-full">
+            <iframe src="https://widget.taggbox.com/146723" style="width:100%;height:600px;border:none;"></iframe>
+        </div>
+      </div>
+  </div>
+  
 </Layout>
